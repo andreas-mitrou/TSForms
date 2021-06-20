@@ -1,34 +1,9 @@
-npm install --save-dev webpack webpack-cli ts-loader
-// tsconfig.json
-{
-    "compilerOptions": {
-        "module": "commonjs",
-        "lib": ["es5", "es6", "dom"],
-        "rootDir": "src"
-    }
-}
-//webpack.config.js
-const path = require('path');
+# TSForms
 
-module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  entry: {
-    main: "./src/YourEntryFile.ts",
-  },
-  output: {
-    path: path.resolve(__dirname, './build'),
-    filename: "[name]-bundle.js" // <--- Will be compiled to this single file
-  },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js"],
-  },
-  module: {
-    rules: [
-      { 
-        test: /\.tsx?$/,
-        loader: "ts-loader"
-      }
-    ]
-  }
-};
+**TS Forms** is a framework for building web forms using Typesript.
+
+To use the framework just do:
+1. Clone the repository
+2. cd src
+3. npm install
+4. npx webpack -w
